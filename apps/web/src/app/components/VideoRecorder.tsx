@@ -1,7 +1,6 @@
 'use client';
 
 import React, { useState, useRef, useEffect } from 'react';
-import { Camera, Square, Upload, RefreshCcw, RotateCw } from 'lucide-react';
 
 interface Recording {
   _id: string;
@@ -269,16 +268,14 @@ const VideoRecorder: React.FC = () => {
               <>
                 <button
                   onClick={() => void uploadVideo()}
-                  className="border-2 border-gray-300 px-8 py-3 rounded-lg hover:bg-gray-50 flex items-center gap-3 font-medium transition-colors"
+                  className="border-2 border-gray-300 px-8 py-3 rounded-lg hover:bg-gray-50 font-medium transition-colors"
                 >
-                  <Upload className="w-5 h-5" />
                   UPLOAD & TRANSCRIBE
                 </button>
                 <button
                   onClick={resetRecording}
-                  className="border-2 border-gray-300 px-8 py-3 rounded-lg hover:bg-gray-50 flex items-center gap-3 font-medium transition-colors"
+                  className="border-2 border-gray-300 px-8 py-3 rounded-lg hover:bg-gray-50 font-medium transition-colors"
                 >
-                  <RefreshCcw className="w-5 h-5" />
                   TAKE NEW VIDEO
                 </button>
               </>
@@ -286,25 +283,23 @@ const VideoRecorder: React.FC = () => {
               <>
                 <button
                   onClick={() => void startRecording()}
-                  className="border-2 border-gray-300 px-8 py-3 rounded-lg hover:bg-gray-50 flex items-center gap-3 font-medium transition-colors"
+                  className="border-2 border-gray-300 px-8 py-3 rounded-lg hover:bg-gray-50 font-medium transition-colors"
                 >
-                  <Camera className="w-5 h-5" />
                   START RECORDING
                 </button>
                 <button
                   onClick={toggleMicrophone}
-                  className={`border-2 border-gray-300 px-8 py-3 rounded-lg hover:bg-gray-50 flex items-center gap-3 font-medium transition-colors ${
+                  className={`border-2 border-gray-300 px-8 py-3 rounded-lg hover:bg-gray-50 font-medium transition-colors ${
                     isMicrophoneEnabled ? 'bg-blue-50' : ''
                   }`}
                 >
-                  {isMicrophoneEnabled ? 'Disable Microphone' : 'Enable Microphone'}
+                  {isMicrophoneEnabled ? 'DISABLE MICROPHONE' : 'ENABLE MICROPHONE'}
                 </button>
                 {isMobile && (
                   <button
                     onClick={() => void switchCamera()}
-                    className="border-2 border-gray-300 px-8 py-3 rounded-lg hover:bg-gray-50 flex items-center gap-3 font-medium transition-colors"
+                    className="border-2 border-gray-300 px-8 py-3 rounded-lg hover:bg-gray-50 font-medium transition-colors"
                   >
-                    <RotateCw className="w-5 h-5" />
                     SWITCH CAMERA
                   </button>
                 )}
@@ -312,9 +307,8 @@ const VideoRecorder: React.FC = () => {
             ) : (
               <button
                 onClick={stopRecording}
-                className="border-2 border-gray-300 px-8 py-3 rounded-lg hover:bg-gray-50 flex items-center gap-3 font-medium transition-colors"
+                className="border-2 border-gray-300 px-8 py-3 rounded-lg hover:bg-gray-50 font-medium transition-colors"
               >
-                <Square className="w-5 h-5" />
                 STOP RECORDING
               </button>
             )}
