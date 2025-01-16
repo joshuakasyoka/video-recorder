@@ -1,3 +1,4 @@
+// apps/web/src/app/page.tsx
 import VideoRecorder from './components/VideoRecorder'
 
 export default function Home() {

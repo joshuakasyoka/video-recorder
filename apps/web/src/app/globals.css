@@ -237,3 +237,6 @@ button.secondary {
     filter: invert();
   }
 }
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
