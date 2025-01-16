@@ -3,23 +3,16 @@
     "version": "0.1.0",
     "private": true,
     "scripts": {
-      "dev": "next dev --port 3000",
+      "dev": "next dev",
       "build": "next build",
-      "start": "next start",
-      "lint": "next lint --max-warnings 0",
-      "check-types": "tsc --noEmit"
+      "start": "next start"
     },
     "dependencies": {
-      "@repo/ui": "*",
-      "@types/multer": "^1.4.12",
-      "lucide-react": "^0.471.1",
       "next": "14.1.0",
       "react": "18.2.0",
       "react-dom": "18.2.0"
     },
     "devDependencies": {
-      "@repo/eslint-config": "*",
-      "@repo/typescript-config": "*",
       "@types/node": "^20",
       "@types/react": "^18.2.0",
       "@types/react-dom": "^18.2.0",
